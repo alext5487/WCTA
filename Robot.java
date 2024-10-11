@@ -21,9 +21,7 @@ public class Robot extends TimedRobot {
   }
 
   /**
-   * This function is run when the robot is first started up and should be used for any
-   * initialization code.
-   */
+   * Run when the robot is first started up and should be used for any initialization code. */
   @Override
   public void robotInit() {
     // We need to invert one side of the drivetrain so that positive voltages
@@ -32,13 +30,13 @@ public class Robot extends TimedRobot {
     m_rightDrive.setInverted(true);
   }
 
-  /** This function is run once each time the robot enters autonomous mode. */
+  /** Run once each time the robot enters autonomous mode. */
   @Override
   public void autonomousInit() {
     m_timer.restart();
   }
 
-  /** This function is called periodically during autonomous. */
+  /** Called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
     // Drive for 2 seconds
@@ -50,21 +48,21 @@ public class Robot extends TimedRobot {
     }
   }
 
-  /** This function is called once each time the robot enters teleoperated mode. */
+  /** Called once each time the robot enters teleoperated mode. */
   @Override
   public void teleopInit() {}
 
-  /** This function is called periodically during teleoperated mode. */
+  /** Called periodically during teleoperated mode. */
   @Override
   public void teleopPeriodic() {
     m_robotDrive.arcadeDrive(-m_controller.getLeftY(), -m_controller.getRightX());
   }
 
-  /** This function is called once each time the robot enters test mode. */
+  /** Called once each time the robot enters test mode. */
   @Override
   public void testInit() {}
 
-  /** This function is called periodically during test mode. */
+  /**Called periodically during test mode. */
   @Override
   public void testPeriodic() {}
 }
