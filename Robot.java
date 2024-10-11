@@ -1,5 +1,4 @@
 package frc.robot;
-
 import edu.wpi.first.util.sendable.SendableRegistry;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -23,7 +22,7 @@ public class Robot extends TimedRobot {
   // Run when the robot is first started up and should be used for any initialization code. */
   @Override
   public void robotInit() {
-    // We need to invert one side of the drivetrain so that positive voltages
+    // Invert one side of the drivetrain so that positive voltages
     // result in both sides moving forward. Depending on how your robot's
     // gearbox is constructed, you might have to invert the left side instead.
     m_rightDrive.setInverted(true);
